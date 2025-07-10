@@ -2,6 +2,8 @@
 10-07-25
 
 this are the file & folder structure of backand.
+
+
 rent-platform/
 ├── client/         # React frontend
 └── server/         # Node + Express backend
