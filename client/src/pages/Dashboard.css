@@ -1,7 +1,7 @@
 .dashboard-container {
   padding: 2rem;
   color: #fff;
-  background-color: #121212;
+  background-color: #8c9cec;
   min-height: 100vh;
 }
 
@@ -19,11 +19,11 @@
 }
 
 .dashboard-card {
-  background-color: #1e1e1e;
+  background-color: #c6c859;
   padding: 1.5rem;
   border-radius: 10px;
   width: 280px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(230, 9, 142, 0.3);
   transition: transform 0.3s;
 }
 

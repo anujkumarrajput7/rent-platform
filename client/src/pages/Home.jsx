@@ -13,14 +13,24 @@ const Home = () => {
       </div>
 
       {/* 🏷️ Main Categories */}
-      <div style={styles.section}>
-        <h2 style={styles.sectionTitle}>Main Categories</h2>
-        <div style={styles.categories}>
-          <div style={styles.category}>🏠 House</div>
-          <div style={styles.category}>🏢 Flat</div>
-          <div style={styles.category}>🛏️ PG / Room</div>
-        </div>
-      </div>
+<div style={styles.section}>
+  <h2 style={styles.sectionTitle}>Main Categories</h2>
+  <div style={styles.mainCategories}>
+    <div style={styles.mainCategoryCard}>
+      <img src="/images/house.png" alt="House" style={styles.categoryImage} />
+      <p>House</p>
+    </div>
+    <div style={styles.mainCategoryCard}>
+      <img src="/images/flat.png" alt="Flat" style={styles.categoryImage} />
+      <p>Flat</p>
+    </div>
+    <div style={styles.mainCategoryCard}>
+      <img src="/images/pg.png" alt="PG" style={styles.categoryImage} />
+      <p>PG</p>
+    </div>
+  </div>
+</div>
+
 
       {/* 🛠️ Product Rentals */}
       <div style={styles.section}>
