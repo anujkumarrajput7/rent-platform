@@ -13,23 +13,18 @@ const Home = () => {
       </div>
 
       {/* 🏷️ Main Categories */}
-<div style={styles.section}>
-  <h2 style={styles.sectionTitle}>Main Categories</h2>
-  <div style={styles.mainCategories}>
-    <div style={styles.mainCategoryCard}>
-      <img src="/images/house.png" alt="House" style={styles.categoryImage} />
-      <p>House</p>
-    </div>
-    <div style={styles.mainCategoryCard}>
-      <img src="/images/flat.png" alt="Flat" style={styles.categoryImage} />
-      <p>Flat</p>
-    </div>
-    <div style={styles.mainCategoryCard}>
-      <img src="/images/pg.png" alt="PG" style={styles.categoryImage} />
-      <p>PG</p>
-    </div>
-  </div>
-</div>
+      {/* 🏠 Rent Options with Real Photos */}
+      <div style={styles.section}>
+        <h2>🏠 Rent Houses</h2>
+        <img src="/image/house.jpg" alt="House" style={{ width: '100px', borderRadius: '8px' }} />
+
+        <h2>🏢 Rent Flats</h2>
+        <img src="/image/flat.jpg" alt="Flat" style={{ width: '100px', borderRadius: '8px' }} />
+
+        <h2>🛏️ Rent PG</h2>
+        <img src="/image/pg.jpg" alt="PG" style={{ width: '100px', borderRadius: '8px' }} />
+      </div>
+
 
 
       {/* 🛠️ Product Rentals */}
