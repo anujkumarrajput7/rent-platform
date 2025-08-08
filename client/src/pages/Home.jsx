@@ -23,13 +23,16 @@ const Home = () => {
         <h2 style={styles.sectionTitle}>Main Categories</h2>
         <div style={styles.mainCategories}>
           {mainCategoryData.map((cat, idx) => (
-            <div style={styles.mainCategoryCard} key={idx}>
-              <img
-                src={cat.image}
-                alt={cat.name}
-                style={styles.categoryImage}
-              />
-              <p>{cat.name}</p>
+            <div
+              key={idx}
+              style={{
+                ...styles.mainCategoryCard,
+                backgroundImage: `url(${cat.image})`,
+              }}
+            >
+              <div style={styles.overlay}>
+                <p style={styles.categoryText}>{cat.name}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -136,21 +139,33 @@ const styles = {
     flexWrap: 'wrap',
   },
   mainCategoryCard: {
-    flex: '1 1 150px',
-    padding: '1rem',
-    backgroundColor: '#fff',
+    flex: '1 1 calc(33.333% - 1rem)',
+    height: '200px',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
     borderRadius: '8px',
-    textAlign: 'center',
-    boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
+    overflow: 'hidden',
+    position: 'relative',
     cursor: 'pointer',
-    transition: 'transform 0.2s ease',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+    transition: 'transform 0.3s ease',
   },
-  categoryImage: {
-    width: '100px',
-    height: '100px',
-    borderRadius: '8px',
-    objectFit: 'cover',
-    marginBottom: '0.5rem',
+  overlay: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.4)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  categoryText: {
+    color: '#fff',
+    fontSize: '1.5rem',
+    fontWeight: 'bold',
+    textShadow: '1px 1px 3px rgba(0,0,0,0.6)',
   },
   categories: {
     display: 'flex',
