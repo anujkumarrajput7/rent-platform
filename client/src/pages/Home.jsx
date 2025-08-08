@@ -18,13 +18,17 @@ const Home = () => {
         <button style={styles.searchButton}>Search</button>
       </div>
 
-      {/* 🏷️ Main Categories */ }
+      {/* 🏷️ Main Categories */}
       <div style={styles.section}>
         <h2 style={styles.sectionTitle}>Main Categories</h2>
         <div style={styles.mainCategories}>
           {mainCategoryData.map((cat, idx) => (
             <div style={styles.mainCategoryCard} key={idx}>
-              <img src={cat.image} alt={cat.name} style={styles.categoryImage} />
+              <img
+                src={cat.image}
+                alt={cat.name}
+                style={styles.categoryImage}
+              />
               <p>{cat.name}</p>
             </div>
           ))}
@@ -64,9 +68,9 @@ const Home = () => {
 };
 
 const mainCategoryData = [
-  { name: 'House', image: '/images/house.png' },
-  { name: 'Flat', image: '/images/flat.png' },
-  { name: 'PG', image: '/images/pg.png' },
+  { name: 'House', image: '/image/house.jpg' },
+  { name: 'Flat', image: '/image/flat.jpg' },
+  { name: 'PG', image: '/image/pg.jpg' },
 ];
 
 const productCategories = [
@@ -142,7 +146,10 @@ const styles = {
     transition: 'transform 0.2s ease',
   },
   categoryImage: {
-    maxWidth: '80px',
+    width: '100px',
+    height: '100px',
+    borderRadius: '8px',
+    objectFit: 'cover',
     marginBottom: '0.5rem',
   },
   categories: {
