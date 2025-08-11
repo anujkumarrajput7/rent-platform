@@ -1,37 +1,63 @@
+/* Background with soft gradient */
 .dashboard-container {
-  padding: 2rem;
-  color: #fff;
-  background-color: #8c9cec;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
   min-height: 100vh;
+  padding: 40px;
+  overflow-y: auto;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.dashboard-container h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+.dashboard-heading {
   text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #2c3e50;
 }
 
+/* Grid for cards */
 .dashboard-grid {
-  display: flex;
-  justify-content: space-around;
-  gap: 2rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
 }
 
+/* Card styles */
 .dashboard-card {
-  background-color: #c6c859;
-  padding: 1.5rem;
-  border-radius: 10px;
-  width: 280px;
-  box-shadow: 0 0 10px rgba(230, 9, 142, 0.3);
-  transition: transform 0.3s;
-}
-
-.dashboard-card:hover {
-  transform: translateY(-5px);
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .dashboard-card h3 {
-  color: #61dafb;
-  margin-bottom: 0.5rem;
+  margin-bottom: 10px;
+  color: #34495e;
+  font-size: 1.2rem;
+}
+
+.dashboard-card p {
+  color: #7f8c8d;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Hover effect */
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Scrollbar styling */
+.dashboard-container::-webkit-scrollbar {
+  width: 8px;
+}
+.dashboard-container::-webkit-scrollbar-thumb {
+  background-color: #a5b1c2;
+  border-radius: 4px;
+}
+.dashboard-container::-webkit-scrollbar-track {
+  background-color: #ecf0f1;
 }
