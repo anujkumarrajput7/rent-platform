@@ -1,32 +1,29 @@
 import React from 'react';
+import './Register.css'; // import styles
 
 const Register = () => {
   return (
-    <div className="container">
-      <h2>Register</h2>
+    <div className="register-wrapper">
+      <div className="register-container">
+        <h2>Create an Account</h2>
 
-      <input type="text" placeholder="Name" className="input" /><br /><br />
-      <input type="text" placeholder="Username" className="input" /><br /><br />
-      <input type="email" placeholder="Email" className="input" /><br /><br />
-      <input type="tel" placeholder="Phone Number" className="input" /><br /><br />
-      <input type="date" placeholder="Date of Birth" className="input" /><br /><br />
-      <input type="password" placeholder="Password" className="input" /><br /><br />
-      <input type="password" placeholder="Confirm Password" className="input" /><br /><br />
+        <input type="text" placeholder="Full Name" className="register-input" />
+        <input type="text" placeholder="Username" className="register-input" />
+        <input type="email" placeholder="Email" className="register-input" />
+        <input type="tel" placeholder="Phone Number" className="register-input" />
+        <input type="date" className="register-input" />
+        <input type="password" placeholder="Password" className="register-input" />
+        <input type="password" placeholder="Confirm Password" className="register-input" />
 
-      <div style={{ marginBottom: '1rem' }}>
-        <label style={{ marginRight: '1rem' }}>Gender:</label>
-        <label>
-          <input type="radio" name="gender" value="male" /> Male
-        </label>
-        <label style={{ marginLeft: '1rem' }}>
-          <input type="radio" name="gender" value="female" /> Female
-        </label>
-        <label style={{ marginLeft: '1rem' }}>
-          <input type="radio" name="gender" value="other" /> Other
-        </label>
+        <div className="gender-group">
+          <label>Gender:</label>
+          <label><input type="radio" name="gender" value="male" /> Male</label>
+          <label><input type="radio" name="gender" value="female" /> Female</label>
+          <label><input type="radio" name="gender" value="other" /> Other</label>
+        </div>
+
+        <button className="register-btn">Register</button>
       </div>
-
-      <button className="btn">Register</button>
     </div>
   );
 };
